@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=The+Nautigal:wght@400;700&display=swap');
+
 @function px($value) {
-  @return calc(#{$value} * 100vw / 1920);
+  @return clamp(#{$value * 0.45}px, calc(#{$value} * 100vw / 1920), #{$value}px);
 }
 
 body {
@@ -31,5 +33,19 @@ body {
     font-size: px(40);
     margin: 0;
     opacity: 0.85;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: 24px 16px;
+
+    &__title {
+      font-size: px(72);
+    }
+
+    &__subtitle {
+      font-size: px(28);
+    }
   }
 }
