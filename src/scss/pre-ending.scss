@@ -1,0 +1,35 @@
+@function px($value) {
+  @return calc(#{$value} * 100vw / 1920);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #fff;
+  background: #0f3460;
+  font-family: 'Cormorant', serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: px(40);
+
+  &__title {
+    font-family: 'The Nautigal', cursive;
+    font-size: px(120);
+    font-weight: 400;
+    margin: 0 0 px(20);
+  }
+
+  &__subtitle {
+    font-size: px(40);
+    margin: 0;
+    opacity: 0.85;
+  }
+}

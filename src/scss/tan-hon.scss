@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=The+Nautigal:wght@400;700&display=swap');
+
+// src/fonts/wd/Parfumerie Font/ParfumerieScriptOldStyle.otf
+
+@font-face {
+  font-family: ParfumerieScriptOldStyle;
+  src: url('../assets/fonts/ParfumerieScriptOldStyle.otf');
+}
+
+@function px($value) {
+  @return calc(#{$value} * 100vw / 1920);
+}
+
+body {
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  --font-name: 'ParfumerieScriptOldStyle';
+  --font-save: 'Cormorant';
+  color: #fff;
+}
+
+.screen-intro {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(1.2);
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(1.2);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__image {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./wd-2.jpg');
+    background-size: 135vw;
+    background-position: center right;
+    z-index: 99;
+    opacity: 0.8;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 0 60px;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.1);
+
+    &-title {
+      font-size: px(90);
+      text-align: center;
+      font-weight: bold;
+      font-family: var(--font-save);
+      position: relative;
+      z-index: 3;
+    }
+
+    &-description {
+      // save the date
+      font-weight: 700;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      z-index: 3;
+      flex-direction: column;
+
+      &-name {
+        font-family: var(--font-name);
+        font-size: px(130);
+        text-align: center;
+        font-weight: 400;
+      }
+
+      svg {
+        width: px(100);
+        max-height: 100px;
+      }
+
+      &-separator {
+        font-family: var(--font-name);
+        font-weight: 700;
+        text-align: center;
+        max-height: fit-content;
+      }
+    }
+
+    &-date {
+      z-index: 3;
+      position: relative;
+      font-family: var(--font-date);
+      font-size: px(40);
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      letter-spacing: 4px;
+    }
+  }
+}

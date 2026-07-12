@@ -6,21 +6,21 @@ Project frontend dùng **Vite** với SCSS, JavaScript, Font, Image và HTML.
 
 ```
 DP-TT/
-├── index.html              # Entry HTML
+├── index.html              # Trang chính (Save The Date)
+├── vu-qui/index.html       # Trang Vu Quy
+├── tan-hon/index.html      # Trang Tân Hôn
+├── pre-ending/index.html   # Trang Pre Ending
 ├── vite.config.js          # Cấu hình Vite
 ├── public/                 # Static assets (copy nguyên khi build)
-│   ├── favicon.svg
+│   ├── CNAME               # Custom domain
 │   └── images/
-│       └── logo.svg
 └── src/
-    ├── main.js             # Entry JavaScript
-    ├── scss/
-    │   ├── main.scss       # SCSS chính
-    │   ├── _variables.scss # Biến SCSS
-    │   └── _fonts.scss     # @font-face
+    ├── js/                 # JS từng trang
+    ├── scss/               # SCSS từng trang
+    ├── media/              # MP3
     └── assets/
-        ├── fonts/          # Font files (.woff2)
-        └── images/         # Image import qua JS
+        ├── fonts/
+        └── images/
 ```
 
 ## Sử dụng
@@ -55,16 +55,21 @@ npm run preview
 Mỗi khi push lên nhánh `main`, GitHub Actions sẽ tự động:
 
 1. Cài dependencies
-2. Chạy `npm run build`
+2. Chạy `npm run build` (build tất cả trang)
 3. Deploy thư mục `dist/` lên nhánh `gh-pages`
+
+### Các trang sau deploy
+
+| URL | Trang |
+|-----|-------|
+| `https://daiphucthuytrang.com/` | Save The Date |
+| `https://daiphucthuytrang.com/vu-qui/` | Vu Quy |
+| `https://daiphucthuytrang.com/tan-hon/` | Tân Hôn |
+| `https://daiphucthuytrang.com/pre-ending/` | Pre Ending |
 
 ### Bật GitHub Pages
 
 1. Vào repo **Settings → Pages**
 2. **Source**: chọn **Deploy from a branch**
 3. **Branch**: `gh-pages` / `/ (root)`
-4. Truy cập site sau khi deploy xong
-
-```bash
-npm run build
-```
+4. Custom domain: `daiphucthuytrang.com` (CNAME đã cấu hình sẵn)

@@ -10,6 +10,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        vuqui: resolve(__dirname, 'vu-qui/index.html'),
+        tanhon: resolve(__dirname, 'tan-hon/index.html'),
+        preending: resolve(__dirname, 'pre-ending/index.html'),
       },
     },
   },
