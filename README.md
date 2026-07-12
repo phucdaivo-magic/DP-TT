@@ -63,10 +63,8 @@ Mỗi khi push lên nhánh `main`, GitHub Actions sẽ tự động:
 1. Vào repo **Settings → Pages**
 2. **Source**: chọn **Deploy from a branch**
 3. **Branch**: `gh-pages` / `/ (root)`
-4. Truy cập: `https://phucdaivo-magic.github.io/DP-TT/`
-
-### Build local cho GitHub Pages
+4. Truy cập site sau khi deploy xong
 
 ```bash
-npm run build:pages
+npm run build
 ```

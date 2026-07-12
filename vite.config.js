@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? '/DP-TT/' : '/',
   root: '.',
   publicDir: 'public',
   build: {
