@@ -1,0 +1,15 @@
+{
+  "hash": "cd572c0d",
+  "configHash": "deda56a9",
+  "lockfileHash": "d7f2054b",
+  "browserHash": "5aa1d043",
+  "optimized": {
+    "youtube-player": {
+      "src": "../../node_modules/youtube-player/dist/index.js",
+      "file": "youtube-player.js",
+      "fileHash": "9072c5d4",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}

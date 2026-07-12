@@ -1,4 +1,5 @@
 import '../scss/0108.scss';
+import musicUrl from '@/media/le-duong.mp3';
 import YouTubePlayer from 'youtube-player';
 
 class VideoPlayer {
@@ -54,12 +55,16 @@ class VideoPlayer {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const music = document.getElementById('music');
+    if (music) {
+        music.src = musicUrl;
+    }
+
     document.querySelectorAll('[data-video]').forEach(video => {
         new VideoPlayer(video);
     });
     document.addEventListener('click', () => {
         document.documentElement.requestFullscreen();
-        document.getElementById("music").play()
-            .catch(err => console.log(err));
-    })
+        music?.play().catch(err => console.log(err));
+    });
 });

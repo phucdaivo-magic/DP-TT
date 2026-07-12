@@ -49,3 +49,24 @@ npm run preview
 | **Font** | `src/assets/fonts/` | Khai báo `@font-face` trong `_fonts.scss` |
 | **Image (static)** | `public/images/` | Dùng trực tiếp trong HTML: `/images/logo.svg` |
 | **Image (bundled)** | `src/assets/images/` | Import trong JS: `import img from './assets/images/...'` |
+
+## Auto build & deploy
+
+Mỗi khi push lên nhánh `main`, GitHub Actions sẽ tự động:
+
+1. Cài dependencies
+2. Chạy `npm run build`
+3. Deploy thư mục `dist/` lên nhánh `gh-pages`
+
+### Bật GitHub Pages
+
+1. Vào repo **Settings → Pages**
+2. **Source**: chọn **Deploy from a branch**
+3. **Branch**: `gh-pages` / `/ (root)`
+4. Truy cập: `https://phucdaivo-magic.github.io/DP-TT/`
+
+### Build local cho GitHub Pages
+
+```bash
+npm run build:pages
+```
