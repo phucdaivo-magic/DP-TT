@@ -10,11 +10,16 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=The+Nautigal:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=The+Nautigal:wght@400;700&display=swap');
 
 @font-face {
     font-family: 'ParfumerieScriptOldStyle';
     src: url('../assets/fonts/ParfumerieScriptOldStyle.otf');
+}
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../assets/fonts/Garet.woff2');
 }
 
 @font-face {
@@ -24,6 +29,10 @@
 
 [data-name="name"] {
     font-weight: bold;
+}
+
+.font-Garet {
+    font-family: 'Garet';
 }
 
 body {
