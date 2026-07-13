@@ -7,7 +7,7 @@ Project frontend dùng **Vite** với SCSS, JavaScript, Font, Image và HTML.
 ```
 DP-TT/
 ├── index.html              # Trang chính (Save The Date)
-├── vu-qui/index.html       # Trang Vu Quy
+├── vu-quy/index.html       # Trang Vu Quy
 ├── tan-hon/index.html      # Trang Tân Hôn
 ├── pre-ending/index.html   # Trang Pre Ending
 ├── vite.config.js          # Cấu hình Vite
@@ -41,13 +41,13 @@ npm run preview
 
 ## Hướng dẫn assets
 
-| Loại | Vị trí | Cách dùng |
-|------|--------|-----------|
-| **HTML** | `index.html` | Entry point, link script tại `/src/main.js` |
-| **JS** | `src/main.js` | Import SCSS, images, logic app |
-| **SCSS** | `src/scss/` | Import trong `main.js`, dùng `@use` cho partials |
-| **Font** | `src/assets/fonts/` | Khai báo `@font-face` trong `_fonts.scss` |
-| **Image (static)** | `public/images/` | Dùng trực tiếp trong HTML: `/images/logo.svg` |
+| Loại                | Vị trí               | Cách dùng                                                |
+| ------------------- | -------------------- | -------------------------------------------------------- |
+| **HTML**            | `index.html`         | Entry point, link script tại `/src/main.js`              |
+| **JS**              | `src/main.js`        | Import SCSS, images, logic app                           |
+| **SCSS**            | `src/scss/`          | Import trong `main.js`, dùng `@use` cho partials         |
+| **Font**            | `src/assets/fonts/`  | Khai báo `@font-face` trong `_fonts.scss`                |
+| **Image (static)**  | `public/images/`     | Dùng trực tiếp trong HTML: `/images/logo.svg`            |
 | **Image (bundled)** | `src/assets/images/` | Import trong JS: `import img from './assets/images/...'` |
 
 ## Auto build & deploy
@@ -60,12 +60,12 @@ Mỗi khi push lên nhánh `main`, GitHub Actions sẽ tự động:
 
 ### Các trang sau deploy
 
-| URL | Trang |
-|-----|-------|
-| `https://daiphucthuytrang.com/` | Save The Date |
-| `https://daiphucthuytrang.com/vu-qui/` | Vu Quy |
-| `https://daiphucthuytrang.com/tan-hon/` | Tân Hôn |
-| `https://daiphucthuytrang.com/pre-ending/` | Pre Ending |
+| URL                                        | Trang         |
+| ------------------------------------------ | ------------- |
+| `https://daiphucthuytrang.com/`            | Save The Date |
+| `https://daiphucthuytrang.com/vu-qui/`     | Vu Quy        |
+| `https://daiphucthuytrang.com/tan-hon/`    | Tân Hôn       |
+| `https://daiphucthuytrang.com/pre-ending/` | Pre Ending    |
 
 ### Bật GitHub Pages
 

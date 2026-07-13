@@ -1,4 +1,4 @@
-import '../scss/vu-qui.scss';
+import '../scss/vu-quy.scss';
 import musicUrl from '@/media/le-duong.mp3';
 import YouTubePlayer from 'youtube-player';
 
