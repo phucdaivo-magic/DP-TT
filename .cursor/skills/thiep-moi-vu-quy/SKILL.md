@@ -1,34 +1,34 @@
 ---
-name: thiep-moi-vu-qui
+name: thiep-moi-vu-quy
 description: >-
   Tạo và chỉnh sửa trang thiệp mời Lễ Vu Quy trong project Vite DP-TT.
-  Dùng khi user nhắc vu qui, vu quy, vu-qui, thiệp mời vu quy, hoặc cần
-  thêm/sửa trang /vu-qui/.
+  Dùng khi user nhắc vu qui, vu quy, vu-quy, thiệp mời vu quy, hoặc cần
+  thêm/sửa trang /vu-quy/.
 ---
 
 # Thiệp mời Vu Quy
 
 ## Mục tiêu
 
-Trang **Lễ Vu Quy** tại `/vu-qui/` — layout center, video YouTube nền, nhạc khi click, ảnh overlay `img.jpg`, ngày **01.08.2026**.
+Trang **Lễ Vu Quy** tại `/vu-quy/` — layout center, video YouTube nền, nhạc khi click, ảnh overlay `img.jpg`, ngày **01.08.2026**.
 
 ## Files liên quan
 
-| File | Vai trò |
-|------|---------|
-| `vu-qui/index.html` | HTML entry |
-| `src/js/vu-qui.js` | Video + nhạc + import SCSS |
-| `src/scss/vu-qui.scss` | Style + responsive |
-| `src/scss/img.jpg` | Ảnh nền overlay |
-| `src/media/le-duong.mp3` | Nhạc nền |
-| `vite.config.js` | `vuqui: resolve(__dirname, 'vu-qui/index.html')` |
+| File                     | Vai trò                                          |
+| ------------------------ | ------------------------------------------------ |
+| `vu-quy/index.html`      | HTML entry                                       |
+| `src/js/vu-quy.js`       | Video + nhạc + import SCSS                       |
+| `src/scss/vu-quy.scss`   | Style + responsive                               |
+| `src/scss/img.jpg`       | Ảnh nền overlay                                  |
+| `src/media/le-duong.mp3` | Nhạc nền                                         |
+| `vite.config.js`         | `vuqui: resolve(__dirname, 'vu-quy/index.html')` |
 
 ## Quy tắc Vite
 
 - HTML **không** link CSS/JS tĩnh (`./scss/*.css`, `./js/*.js`)
-- Script: `<script type="module" src="/src/js/vu-qui.js"></script>`
+- Script: `<script type="module" src="/src/js/vu-quy.js"></script>`
 - Audio: `<audio autoplay id="music"></audio>` — gán `src` trong JS
-- SCSS import trong JS: `import '../scss/vu-qui.scss'`
+- SCSS import trong JS: `import '../scss/vu-quy.scss'`
 - MP3: `import musicUrl from '@/media/le-duong.mp3'`
 - Ảnh trong SCSS: `url('./img.jpg')` (cùng thư mục `src/scss/`)
 
@@ -41,11 +41,14 @@ Trang **Lễ Vu Quy** tại `/vu-qui/` — layout center, video YouTube nền, n
     <div class="screen-intro__content-title">Lễ Vu Quy</div>
     <div class="screen-intro__content-description">
       <div class="screen-intro__content-description-name">Tên chú rể</div>
-      <div class="screen-intro__content-description-separator"><!-- SVG --></div>
+      <div class="screen-intro__content-description-separator">
+        <!-- SVG -->
+      </div>
       <div class="screen-intro__content-description-name">Tên cô dâu</div>
     </div>
     <div class="screen-intro__content-date">
-      <span>01</span><span>.</span><span>08</span><span>.</span><span>2026</span>
+      <span>01</span><span>.</span><span>08</span><span>.</span
+      ><span>2026</span>
     </div>
   </div>
 </div>
@@ -60,7 +63,7 @@ Trang **Lễ Vu Quy** tại `/vu-qui/` — layout center, video YouTube nền, n
   - `@media (max-width: 1024px)` — giảm gap/padding
   - `@media (max-width: 767px)` — tên xếp dọc, SVG xoay 90°
 
-## JS (vu-qui.js)
+## JS (vu-quy.js)
 
 1. Import SCSS + `le-duong.mp3` + `youtube-player`
 2. `VideoPlayer` trên `[data-video]`
@@ -75,14 +78,14 @@ Trang **Lễ Vu Quy** tại `/vu-qui/` — layout center, video YouTube nền, n
 
 ## Deploy
 
-- URL: `https://daiphucthuytrang.com/vu-qui/`
+- URL: `https://daiphucthuytrang.com/vu-quy/`
 - Push `main` → GitHub Actions build → `gh-pages`
 - Không dùng `base: '/DP-TT/'`
 
 ## Checklist khi sửa
 
-- [ ] `vu-qui/index.html` dùng module script `/src/js/vu-qui.js`
+- [ ] `vu-quy/index.html` dùng module script `/src/js/vu-quy.js`
 - [ ] Title: **Lễ Vu Quy**, ngày đúng
 - [ ] `img.jpg` tồn tại trong `src/scss/`
-- [ ] Responsive có trong `vu-qui.scss` (không file mixin riêng)
-- [ ] `npm run build` thành công, có `dist/vu-qui/index.html`
+- [ ] Responsive có trong `vu-quy.scss` (không file mixin riêng)
+- [ ] `npm run build` thành công, có `dist/vu-quy/index.html`
