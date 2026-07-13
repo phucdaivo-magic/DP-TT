@@ -66,7 +66,7 @@ Mỗi khi push lên nhánh `main`, GitHub Actions sẽ tự động:
 | `https://daiphucthuytrang.com/vu-quy/`            | Vu Quy        |
 | `https://daiphucthuytrang.com/tan-hon/`           | Tân Hôn       |
 | `https://daiphucthuytrang.com/pre-ending/`        | Pre Ending    |
-| `https://daiphucthuytrang.com/thiep-cuoi-vu-quy/` | Pre Ending    |
+| `https://daiphucthuytrang.com/thiep-cuoi-vu-quy/` | Thiep cuoi    |
 
 ### Bật GitHub Pages
 
