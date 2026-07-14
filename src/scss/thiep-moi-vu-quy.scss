@@ -1,5 +1,46 @@
 @import 'common.scss';
 
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    40% {
+        transform: rotate(15deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 @function px($value) {
     @return calc(#{$value}px);
 }
@@ -111,16 +152,18 @@ body {
 
 .decor-top-left {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 50%;
+    top: 0px;
+    left: 0px;
+    width: 55%;
     opacity: 0.9;
 
+
     &.double {
-        width: 55%;
+        width: 65%;
         transform: rotateY(180deg) rotate(-270deg);
         opacity: 0.3;
         top: 20px;
+        animation: pulse 5s ease-in-out infinite;
     }
 }
 
@@ -128,12 +171,12 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 55%;
     opacity: 0.9;
     transform: rotate(180deg);
 
     &.double {
-        width: 55%;
+        width: 65%;
         transform: rotateY(180deg) rotate(270deg);
         opacity: 0.3;
         bottom: 20px;
@@ -144,6 +187,7 @@ body {
     width: 50px;
     margin: auto;
     display: block;
+    animation: pulse 5s ease-in-out infinite;
 }
 
 .decor-center-left {
@@ -152,6 +196,7 @@ body {
     top: 50%;
     opacity: 0.2;
     transform: rotate(135deg);
+
 }
 
 .decor-center-right {
@@ -233,12 +278,41 @@ body {
 }
 
 .frame-about {
-    // background: url('../assets/images/la4.webp');
-    background-size: 100%;
+    background-size: cover;
     padding: 20px;
     position: relative;
 
     * {
         z-index: 2
     }
+}
+
+.frame-footer {
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .frame-overview__body {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        text-shadow: 2px 2px 4px #000;
+    }
+
 }
