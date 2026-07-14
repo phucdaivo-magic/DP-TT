@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";const n=new URLSearchParams(location.search);document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("[data-name]").forEach(a=>{const t={name:"Quý khách"},e=n.get(a.dataset.name)||t[a.dataset.name]||"";e&&(a.textContent=e)})});
