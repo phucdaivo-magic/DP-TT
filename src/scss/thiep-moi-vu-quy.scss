@@ -6,8 +6,18 @@
 
 @for $i from 10 through 200 {
     .font-#{$i} {
-        font-size: px($i);
+        --font-size: #{$i};
+        font-size: calc(var(--font-size) * 1px);
+
+        @media screen and (max-width: 800px) {
+            font-size: calc(var(--font-size) * 100vw / 480);
+        }
     }
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=The+Nautigal:wght@400;700&display=swap');
@@ -35,29 +45,28 @@
     font-family: 'Garet';
 }
 
+html {}
+
 body {
     margin: 0;
     --text-color: rgb(52, 75, 56);
     --font-name: 'The Nautigal';
     --font-save: 'Cormorant';
     font-family: 'Cormorant';
+}
 
-    // text-transform: uppercase;
-    &:after {
-        // content: '';
-        // display: block;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // width: 100%;
-        // height: 100%;
-        // z-index: 1;
-        // right: 0;
-        // opacity: 0;
-        // background: url('../assets/images/bg.webp');
-        // position: fixed;
+.album__container {
+    overflow: hidden;
+
+    img {
+        width: 100%;
     }
 
+    .flex {
+        &>div {
+            min-width: 100%;
+        }
+    }
 }
 
 .font-big {
@@ -89,7 +98,6 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, .5);
     overflow: hidden;
     background-color: #f6f4f0;
-
 }
 
 .decor-top {
