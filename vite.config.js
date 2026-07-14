@@ -14,6 +14,7 @@ export default defineConfig({
         tanhon: resolve(__dirname, 'tan-hon/index.html'),
         preending: resolve(__dirname, 'pre-ending/index.html'),
         thiepmoivuquy: resolve(__dirname, 'thiep-moi-vu-quy/index.html'),
+        thiepmoitanhon: resolve(__dirname, 'thiep-moi-tan-hon/index.html'),
       },
     },
   },
